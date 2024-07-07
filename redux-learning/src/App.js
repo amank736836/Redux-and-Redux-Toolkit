@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import "./App.css";
+import Home from "./Home.jsx";
 
 function App() {
+  const { c } = useSelector((state) => state.custom);
+
+  // const value = 30;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{c}</h1>
+
+      {/* {c} */}
+      <Home
+      //  value1={value}
+      />
     </div>
   );
 }
